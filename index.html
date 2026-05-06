@@ -62,7 +62,7 @@
       flex-shrink: 0;
     }
     .smt-website-btn {
-      background: #00ff9d;
+      background: #ffffff;
       border: none;
       padding: 6px 12px;
       border-radius: 6px;
@@ -74,7 +74,7 @@
       flex-shrink: 0;
     }
     .smt-website-btn:hover {
-      background: #00cc7a;
+      background: #e0e0e0;
     }
     .smt-admin-btn {
       margin-top: 10px;
@@ -96,11 +96,11 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full">
-  <div id="app-wrapper" class="h-full w-full flex flex-col" style="background-color: #0f1b2d;">
-   <!-- Header --> <!-- 🔷 SMT AI Assistant Header -->
+  <div id="app-wrapper" class="h-full w-full flex flex-col" style="background-color: #0f1b2d;"><!-- Header --> <!-- 🔷 SMT AI Assistant Header -->
    <div id="smt-ai-header">
     <div class="smt-header-content">
-     <div class="smt-logo"><img src="https://i.ibb.co/1WC9c6B/Blue-minimalist-building-logo-. -0000.jpg" alt="SMT Nigeria Logo" style="height: 40px; width: auto; object-fit: contain;" loading="lazy" onerror="console.error('Logo failed to load:', this.src); this.style.background='#1E3A8A'; this.alt='Logo unavailable';">
+     <div class="smt-logo">
+      <img src="https://i.ibb.co/1WC9c6B/Blue-minimalist-building-logo-. -0000.jpg" alt="SMT Nigeria Logo" style="height: 40px; width: auto; object-fit: contain;" loading="lazy" onerror="console.error('Logo failed to load:', this.src); this.style.background='#1E3A8A'; this.alt='Logo unavailable';">
      </div>
      <div class="smt-center-content">
       <div class="smt-company-name">
@@ -112,20 +112,19 @@
      </div><button class="smt-website-btn" onclick="window.open('https://www.smt.network/africa/en/location/smt-nigeria-lagos-2/', '_blank', 'noopener,noreferrer')">🌐 Website</button>
     </div>
    </div><!-- Chat Area -->
-   <main id="chat-area" class="flex-1 overflow-auto px-4 py-5 space-y-4">
-    <!-- Welcome message inserted by JS -->
+   <main id="chat-area" class="flex-1 overflow-auto px-4 py-5 space-y-4"><!-- Welcome message inserted by JS -->
    </main><!-- Quick Actions -->
-   <div id="quick-actions" class="px-4 pb-2 flex flex-wrap gap-2">
-    <button onclick="sendQuick('I need construction equipment')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#f59e0b;border:1px solid #2a3f5f;">🏗️ Construction</button> <button onclick="sendQuick('I need mining equipment')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#f59e0b;border:1px solid #2a3f5f;">⛏️ Mining</button> <button onclick="sendQuick('I need a generator')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#f59e0b;border:1px solid #2a3f5f;">⚡ Power</button> <button onclick="sendQuick('I need spare parts')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#f59e0b;border:1px solid #2a3f5f;">🔧 Parts</button> <button onclick="sendQuick('I have budget constraints')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#f59e0b;border:1px solid #2a3f5f;">💰 Leasing</button>
+   <div id="quick-actions" class="px-4 pb-2 flex flex-wrap gap-2"><button onclick="sendQuick('I need construction equipment')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#ffffff;border:1px solid #2a3f5f;">🏗️ Construction</button> <button onclick="sendQuick('I need mining equipment')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#ffffff;border:1px solid #2a3f5f;">⛏️ Mining</button> <button onclick="sendQuick('I need a generator')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#ffffff;border:1px solid #2a3f5f;">⚡ Power</button> <button onclick="sendQuick('I need spare parts')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#ffffff;border:1px solid #2a3f5f;">🔧 Parts</button> <button onclick="sendQuick('I have budget constraints')" class="quick-btn text-xs px-3 py-1.5 rounded-full font-medium transition-all hover:scale-105" style="background-color:#1a2a42;color:#ffffff;border:1px solid #2a3f5f;">💰 Leasing</button>
    </div><!-- Input -->
-   <form id="chat-form" class="px-4 pb-4 pt-2">
-    <div class="flex gap-2 items-center rounded-2xl px-4 py-2" style="background-color:#1a2a42;border:1px solid #2a3f5f;">
-     <input id="chat-input" type="text" placeholder="Type your message..." class="flex-1 bg-transparent outline-none text-white text-sm placeholder-gray-500" autocomplete="off"> <button type="submit" style="width:36px;height:36px;border-radius:50%;background-color:#f59e0b;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;">
-      <svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-       <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+   <form id="chat-form" class="px-4 pt-2 pb-2">
+    <div class="flex gap-2 items-center rounded-2xl px-4 py-2" style="background-color:#1a2a42;border:1px solid #2a3f5f;"><input id="chat-input" type="text" placeholder="Type your message..." class="flex-1 bg-transparent outline-none text-white text-sm placeholder-gray-500" autocomplete="off"> <button type="submit" style="width:36px;height:36px;border-radius:50%;background-color:#f59e0b;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;">
+      <svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="#0f1b2d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
       </svg></button>
     </div>
-   </form>
+   </form><!-- Footer -->
+   <div class="px-4 py-3 text-center border-t border-gray-700">
+    <p style="color:#ffffff;font-size:10px;opacity:0.7;">Developed by I.TEC GLOBAL</p>
+   </div>
   </div>
   <script>
 const defaultConfig = {
@@ -300,5 +299,5 @@ window.elementSdk.init({
 
 lucide.createIcons();
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f7b7635339ae908',t:'MTc3ODEwNjk2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f7bb65354436555',t:'MTc3ODEwOTU5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
